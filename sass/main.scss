@@ -11,6 +11,8 @@ body {
 //var
 $color_1: #354d9e;
 $color_2: #202020;
+$color_3: #454545;
+$color_4: #344b9b;
 
 //css classes
 .span_1 {
@@ -23,117 +25,120 @@ $color_2: #202020;
 }
 // start main css
 
-header {
-    background-image: url("../images/assests/bg2.png");
-    background-position: 35rem 0rem;
-    background-size: 60%;
-    background-repeat: no-repeat;
-    height: 100vh;
-    nav {
-        background-color: transparent !important;
-        .nav-link {
-            color: white !important;
-            margin: 0rem 0.5rem;
-            border-bottom: 2px solid transparent;
-            transition: 0.8s;
-        }
-        .nav-link:hover {
-            border-bottom: 2px solid white;
-        }
-        .btn:hover {
-            background-color: $color_1;
-            color: white;
-        }
-    }
-    .header_main {
-        .hm {
-            height: 75vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .header_main_text {
-                p {
-                    font-weight: 500 !important;
-                }
-                .btn_box {
-                    margin-top: 2rem;
-                    .btn {
-                        width: 140px;
-                        font-size: 0.9rem;
-                        color: white;
-                        font-weight: bold;
-                        background-color: $color_1;
-                    }
-                }
-            }
-            .owl-carousel {
-                .item {
+.owl-carousel-1 {
+    .item {
+        header {
+            background-image: url("../images/assests/bg.png");
+            background-position: top right;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            height: 98vh;
+            nav {
+                background-color: transparent !important;
+                .navbar-brand {
                     img {
-                        display: block;
-                        margin: auto;
-                        width: 450px !important;
+                        width: 150px !important;
                     }
+                }
+                .nav-link {
+                    color: white !important;
+                    margin: 0rem 0.5rem;
+                    border-bottom: 2px solid transparent;
+                    transition: 0.8s;
+                }
+                .nav-link:hover {
+                    border-bottom: 2px solid white;
+                }
+                .btn:hover {
+                    background-color: $color_1;
+                    color: white;
+                }
+            }
+            .wrap_header_top {
+                height: 90vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .box_p {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .box_1_c {
+                        h3 {
+                            color: $color_3;
+                        }
+                        p {
+                            font-weight: 600;
+                        }
+                        .btn_box {
+                            margin-top: 1rem;
+                            .btn {
+                                background-color: $color_4;
+                                color: white;
+                                padding: 0.3rem 1rem;
+                                border-radius: 0.3rem;
+                                font-size: 0.8rem;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .item_2{
+        header{
+            background-image: url("../images/assests/bg3.png");
+            background-position: top left;
+            nav{
+                .nav-link {
+                    color: black !important;
                 }
             }
         }
     }
 }
 
-.marketing_tool {
+// End of main page header
+.marketing_tool{
     background-image: url("../images/assests/Bg-2.jpg");
-    background-size: 100% 100%;
-    padding: 3rem 0rem;
-    .row {
-        h3 {
-            color: $color_1;
+    background-size: cover;
+    .box_1{
+        width: 90%;
+        h3{
+            color: $color_4;
         }
-        .mobcard {
-            text-align: right;
-            img {
-                width: 400px;
-            }
-        }
-    }
-}
-.how_it_work {
-    padding-top: 6rem;
-    h1 {
-        font-size: 2.8rem !important;
-    }
-    .row {
-        img {
-            width: 450px;
+        p{
+            padding-right: 4rem;
         }
     }
 }
 
-.extra_features {
-    h1 {
-        font-size: 2.8rem !important;
-    }
-    .extra_features_box {
-        margin-top: 6rem;
-        padding: 2rem 0rem;
+
+.how_it_work{
+    margin-top: 4rem;
+}
+
+
+.extra_features{
+    .extra_features_box{
+        margin-top: 4rem;
+        padding: 3rem 0rem;
         background-image: url("../images/assests/Bg-3.jpg");
         background-size: 100%;
-        .im {
+        .im{
             text-align: center;
-            margin-top: 3rem;
-            p {
-                font-size: 1.2rem;
-            }
-            img {
+            margin-top: 2rem;
+            img{
                 width: 100px;
             }
         }
     }
 }
 
+
 .our_clients {
-    padding: 6rem 0rem 0rem 0rem;
-    h1 {
-        font-size: 2.8rem !important;
-    }
+    margin-top: 5rem;
     .our_clients_box {
         background-image: url("../images/assests/bg-4.png");
         background-position-y: bottom;
@@ -182,49 +187,70 @@ header {
     }
 }
 
-footer{
-    .footer_top{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    .footer_top {
         padding: 4rem 0rem 2rem 0rem;
         background-color: $color_2;
         color: white;
-        h6{
+        h6 {
             font-size: 1.3rem;
             margin-top: 0.8rem;
             font-weight: bold;
             padding: 0rem 0rem 1.8rem 0rem;
         }
-        p{
+        p {
             padding-right: 5rem;
             font-weight: 500;
         }
-        ul{
+        ul {
             padding: 0rem;
             list-style: none;
-            li{
+            li {
                 font-weight: 500;
-                i{
-                    color: #387AC7;
+                i {
+                    color: #387ac7;
                 }
-                a{
+                a {
                     text-decoration: none;
                     color: white;
                 }
             }
         }
-        .media{
-            i{
+        .media {
+            i {
                 cursor: pointer;
                 font-size: 2rem;
                 margin-right: 1rem;
             }
         }
     }
-    .footer_fot{
+    .footer_fot {
         background-color: black;
-        padding:0.1rem 0rem;
-        i{
+        padding: 0.1rem 0rem;
+        i {
             color: red;
-            margin:0rem 0.2rem;
+            margin: 0rem 0.2rem;
         }
     }
 }
@@ -255,94 +281,35 @@ footer{
             }
         }
     }
-    .marketing_tool {
-        background-size: cover;
-        .row {
-            h3 {
-                margin-top: 2rem;
-                text-align: center !important;
-            }
-            .line {
-                margin: auto;
-            }
-            p {
-                margin-top: 1.5rem;
-                text-align: center;
-            }
-        }
-    }
 
-    .how_it_work {
-        padding-top: 3rem;
-        h1 {
-            font-size: 2rem !important;
-        }
-        .row {
-            .hm {
-                text-align: center;
-            }
-        }
-    }
-    .extra_features {
-        h1 {
-            margin-top: 2.5rem;
-        }
-        .extra_features_box {
-            margin-top: 4rem;
-            padding: 1rem 0rem;
-            background-size: cover;
-            .im {
-                text-align: center;
-                margin-top: 2rem;
-                p {
-                    font-size: 1.2rem;
-                }
-                img {
-                    width: 100px;
-                }
-            }
-        }
-    }
-
-    .our_clients{
-        .our_clients_box{
-            background-size: cover;
-            background-repeat: no-repeat;
-            .con_1{
-                width: 100%;
-            }
-        }
-    }
-
-    footer{
-        .footer_top{
+    footer {
+        .footer_top {
             padding: 2rem 0rem 2rem 0rem;
-            h6{
+            h6 {
                 text-align: center;
                 margin-top: 2rem;
                 padding-bottom: 0.1rem;
             }
-            img{
+            img {
                 display: block;
-                margin:auto;
+                margin: auto;
             }
-            p{
+            p {
                 padding-right: 0rem;
                 text-align: center;
             }
-            ul{
+            ul {
                 text-align: center;
-                li{
-                  
-                    i{
-                        color: #387AC7;
+                li {
+                    i {
+                        color: #387ac7;
                         text-align: center;
                     }
                 }
             }
-            .media{
+            .media {
                 text-align: center !important;
-                i{
+                i {
                     margin: 1rem;
                 }
             }

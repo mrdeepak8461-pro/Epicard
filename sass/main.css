@@ -152,14 +152,30 @@ body::-webkit-scrollbar {
   margin-top: 2rem;
 }
 
-.extra_features .extra_features_box .im img {
-  width: 110px;
-  border: 2px solid transparent;
-  padding: 1rem;
+.extra_features .extra_features_box .im .im_c {
+  width: 120px;
   border-radius: 50%;
+  margin: auto;
+  border: 2px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 120px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.extra_features .extra_features_box .im img:hover {
+.extra_features .extra_features_box .im .im_c img {
+  width: 110px;
+}
+
+.extra_features .extra_features_box .im .im_c:hover {
   -webkit-transition: 0.6s;
   transition: 0.6s;
   border: 2px solid white;
@@ -171,9 +187,9 @@ body::-webkit-scrollbar {
 
 .our_clients .our_clients_box {
   background-image: url("../images/assests/bg-4.png");
-  background-position-y: bottom;
+  background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 90%;
 }
 
 .our_clients .our_clients_box .con_1 {
@@ -404,6 +420,14 @@ footer .footer_fot i {
           align-items: center;
 }
 
+.sign_up_page .box_1 .input_box .input_item .imp input {
+  height: 59px;
+}
+
+.sign_up_page .box_1 .input_box .input_item .imp label {
+  color: gray !important;
+}
+
 .sign_up_page .box_1 .input_box .input_item .imp {
   width: 100%;
 }
@@ -515,17 +539,40 @@ footer .footer_fot i {
   border-radius: 0.3rem;
 }
 
-.log_in_page .box_1 .input_box .our_sign_up span {
-  padding: 0rem 1rem;
-  margin: 0rem;
-  color: gray;
-  background-color: white !important;
+.log_in_page .box_1 .input_box .our_sign_up h5 {
+  text-align: center;
+  font-size: 1rem;
+  margin: auto !important;
+  max-width: 320px;
+  position: relative;
 }
 
-.log_in_page .box_1 .input_box .our_sign_up hr {
-  -webkit-transform: translateY(-28px);
-          transform: translateY(-28px);
-  display: none;
+.log_in_page .box_1 .input_box .our_sign_up h5:before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  background: #000;
+  left: 0;
+  top: 50%;
+  z-index: -2;
+}
+
+.log_in_page .box_1 .input_box .our_sign_up h5:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  background: #000;
+  right: 0;
+  top: 50%;
+  z-index: -2;
+}
+
+.log_in_page .box_1 .input_box .our_sign_up span {
+  background: #fff;
 }
 
 .log_in_page .box_1 .input_box .media {
@@ -540,9 +587,15 @@ footer .footer_fot i {
           align-items: center;
 }
 
-.log_in_page .box_1 .input_box .media img {
-  width: 40px;
+.log_in_page .box_1 .input_box .media .me {
   margin: 0rem 1rem;
+  padding: 0.1rem;
+  border-radius: 0.4rem;
+  text-align: center;
+}
+
+.log_in_page .box_1 .input_box .media .me img {
+  width: 40px;
 }
 
 @media only screen and (max-width: 550px) {

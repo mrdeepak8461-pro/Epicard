@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     font-family: "Roboto", sans-serif;
 }
 
@@ -23,6 +23,12 @@ $color_4: #344b9b;
     width: 50px;
     margin: 1.3rem 0rem;
 }
+
+body::-webkit-scrollbar {
+    border: 1px solid red;
+    width: 100%;
+}
+
 // start main css
 
 .owl-carousel-1 {
@@ -32,7 +38,7 @@ $color_4: #344b9b;
             background-position: top right;
             background-size: 60%;
             background-repeat: no-repeat;
-            height: 98vh;
+            height: 100vh;
             nav {
                 background-color: transparent !important;
                 .navbar-brand {
@@ -86,13 +92,20 @@ $color_4: #344b9b;
             }
         }
     }
-    .item_2{
-        header{
+    .item_2 {
+        header {
             background-image: url("../images/assests/bg3.png");
             background-position: top left;
-            nav{
+            nav {
                 .nav-link {
                     color: black !important;
+                }
+                .nav-link {
+                    border-bottom: 2px solid transparent;
+                    transition: 0.8s;
+                }
+                .nav-link:hover {
+                    border-bottom: 2px solid $color_4;
                 }
             }
         }
@@ -100,42 +113,43 @@ $color_4: #344b9b;
 }
 
 // End of main page header
-.marketing_tool{
+.marketing_tool {
     background-image: url("../images/assests/Bg-2.jpg");
     background-size: cover;
-    .box_1{
+    .box_1 {
         width: 90%;
-        h3{
+        h3 {
             color: $color_4;
-        }
-        p{
-            padding-right: 4rem;
         }
     }
 }
 
-
-.how_it_work{
+.how_it_work {
     margin-top: 4rem;
 }
 
-
-.extra_features{
-    .extra_features_box{
+.extra_features {
+    .extra_features_box {
         margin-top: 4rem;
         padding: 3rem 0rem;
         background-image: url("../images/assests/Bg-3.jpg");
         background-size: 100%;
-        .im{
+        .im {
             text-align: center;
             margin-top: 2rem;
-            img{
-                width: 100px;
+            img {
+                width: 110px;
+                border: 2px solid transparent;
+                padding: 1rem;
+                border-radius: 50%;
+            }
+            img:hover {
+                transition: 0.6s;
+                border: 2px solid white;
             }
         }
     }
 }
-
 
 .our_clients {
     margin-top: 5rem;
@@ -160,7 +174,7 @@ $color_4: #344b9b;
                     box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.6);
                     padding: 1.8rem;
                     width: 80%;
-                    i{
+                    i {
                         color: $color_1;
                     }
                     .box {
@@ -186,27 +200,6 @@ $color_4: #344b9b;
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 footer {
     .footer_top {
@@ -258,26 +251,66 @@ footer {
 /*****************************************************End of Desktop********************************************************/
 
 @media only screen and (max-width: 550px) {
+    .owl-carousel-1 {
+        .item_1 {
+            header {
+                nav {
+                    .nav-link {
+                        color: black !important;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .item_2 {
+            header {
+                nav {
+                    .s_logo {
+                        display: none;
+                    }
+                    .nav-link {
+                        color: black !important;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
     header {
+        background-image: none !important;
         nav {
             background-color: transparent !important;
             .nav-link {
                 color: black !important;
-                text-align: center;
-                border-bottom: 2px solid transparent;
-                transition: 0.8s;
-            }
-            .nav-link:hover {
-                border-bottom: 2px solid white;
-            }
-            .btn:hover {
-                background-color: $color_1;
-                color: white;
             }
         }
-        .header_main {
-            .hm {
-                height: 40vh;
+        .wrap_header_top {
+            height: 75% !important;
+        }
+    }
+
+    .marketing_tool {
+        .box_1 {
+            text-align: center !important;
+            .line {
+                margin: 1rem auto;
+            }
+        }
+    }
+
+    .how_it_work {
+        .box_1 {
+            text-align: center;
+        }
+    }
+    .extra_features {
+        margin-top: 2.5rem;
+    }
+    .our_clients {
+        .our_clients_box {
+            .con_1 {
+                margin-top: 2rem !important;
+                width: 100%;
             }
         }
     }
@@ -316,3 +349,171 @@ footer {
         }
     }
 }
+
+// *************************************************************** start sign up page
+
+.sign_up_page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img_1_b {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        width: 40%;
+    }
+    .img_2_b {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 30%;
+    }
+    .box_1 {
+        width: 500px;
+        h4 {
+            color: $color_3;
+            font-weight: 500;
+        }
+        .input_box {
+            .input_item {
+                border-bottom: 2px solid gray;
+                display: flex;
+                align-items: center;
+                .imp {
+                    width: 100%;
+                    .form-control {
+                        width: 100%;
+                        border: none;
+                        color: $color_1;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .btn_box {
+                .btn {
+                    background-color: $color_4;
+                    color: white;
+                    padding: 0.3rem 1.5rem;
+                    border-radius: 0.3rem;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 550px) {
+    .sign_up_page {
+        .box_1 {
+            width: 100%;
+        }
+        .img_1_b {
+            display: none;
+        }
+        .img_2_b {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    .h_logo {
+        display: none !important;
+    }
+}
+
+// *************************************************************** start Log in page
+
+.log_in_page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img_1_b {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        width: 40%;
+    }
+    .img_2_b {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 30%;
+    }
+    .box_1 {
+        width: 500px;
+        h4 {
+            color: $color_3;
+            font-weight: 500;
+        }
+        h5 {
+            color: $color_3;
+        }
+        a {
+            text-decoration: none;
+            color: $color_4;
+            font-weight: 600;
+        }
+        .input_box {
+            .input_item {
+                border-bottom: 2px solid gray;
+                display: flex;
+                align-items: center;
+                .imp {
+                    width: 100%;
+                    .form-control {
+                        width: 100%;
+                        border: none;
+                        color: $color_1;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .btn_box {
+                .btn {
+                    background-color: $color_4;
+                    color: white;
+                    padding: 0.3rem 1.5rem;
+                    border-radius: 0.3rem;
+                }
+            }
+            .our_sign_up {
+                span {
+                    padding: 0rem 1rem;
+                    margin: 0rem;
+                    color: gray;
+                    background-color: white !important;
+                }
+                hr {
+                    transform: translateY(-28px);
+                    display: none;
+                }
+            }
+            .media {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 40px;
+                    margin: 0rem 1rem;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 550px) {
+    .log_in_page {
+        .box_1 {
+            width: 100%;
+        }
+        .img_1_b {
+            display: none;
+        }
+        .img_2_b {
+            display: none;
+        }
+    }
+}
+

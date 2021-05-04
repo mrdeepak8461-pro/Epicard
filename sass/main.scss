@@ -117,7 +117,6 @@ body::-webkit-scrollbar {
     background-image: url("../images/assests/Bg-2.jpg");
     background-size: cover;
     .box_1 {
-        width: 90%;
         h3 {
             color: $color_4;
         }
@@ -392,7 +391,6 @@ footer {
                 align-items: center;
                 .imp{
                     input{
-                        // border:1px solid red !important;
                         height: 59px;
                     }
                     label{
